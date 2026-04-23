@@ -93,6 +93,7 @@ select {
 
 .site-nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 18px;
   color: var(--muted);
 }
@@ -154,7 +155,7 @@ select {
 .hero-copy {
   position: relative;
   overflow: hidden;
-  padding: 48px;
+  padding: clamp(28px, 4vw, 48px);
   border-radius: 40px;
   background:
     linear-gradient(145deg, rgba(16, 35, 63, 0.96), rgba(28, 57, 99, 0.9)),
@@ -1013,7 +1014,6 @@ button:focus {
 }
 
 @media (max-width: 980px) {
-
   .hero,
   .detail-layout,
   .home-panels,
@@ -1022,6 +1022,36 @@ button:focus {
   .destination-grid,
   .results-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .page-shell {
+    width: min(100% - 28px, 100%);
+  }
+
+  .site-header {
+    border-radius: 30px;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+  }
+
+  .brand {
+    width: 100%;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .booking-panel,
+  .detail-summary,
+  .detail-missing,
+  .contact-card,
+  .map-card,
+  .about-card {
+    border-radius: 26px;
   }
 
   .home-panel-wide {
@@ -1036,6 +1066,22 @@ button:focus {
     max-width: 100%;
     font-size: 1.8rem !important;
   }
+
+  .page-title-exact {
+    font-size: 2rem !important;
+    line-height: 1.18 !important;
+  }
+
+  .places-lead,
+  .about-lead,
+  .contact-lead,
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .cart-item-main {
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 700px) {
@@ -1044,22 +1090,39 @@ button:focus {
   }
 
   .site-header,
-  .site-nav,
   .section-heading,
   .stay-meta,
   .stay-footer,
   .booking-header,
-  .cart-actions,
-  .cart-item {
+  .cart-actions {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .site-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .site-nav a {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.52);
   }
 
   .hero-copy,
   .home-panel,
   .booking-panel,
   .detail-summary,
-  .detail-missing {
+  .detail-missing,
+  .contact-card,
+  .map-card,
+  .about-card {
     padding: 22px;
   }
 
@@ -1075,6 +1138,7 @@ button:focus {
   }
 
   .site-header {
+    padding: 16px;
     border-radius: 24px;
   }
 
@@ -1115,6 +1179,11 @@ button:focus {
     align-items: flex-start;
   }
 
+  .detail-actions .primary-button,
+  .detail-actions .ghost-button {
+    width: 100%;
+  }
+
   .hero-actions {
     width: 100%;
   }
@@ -1122,5 +1191,115 @@ button:focus {
   .hero-actions .primary-button,
   .hero-actions .ghost-button {
     width: 100%;
+  }
+
+  .hero-stats {
+    gap: 12px;
+  }
+
+  .hero-stats article {
+    padding: 14px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .results-count {
+    width: 100%;
+  }
+
+  .cart-item {
+    display: grid;
+    gap: 14px;
+  }
+
+  .cart-item-main {
+    width: 100%;
+  }
+
+  .cart-remove {
+    width: 100%;
+  }
+
+  .booking-details {
+    gap: 12px;
+  }
+
+  .booking-details div {
+    padding: 12px;
+  }
+
+  .map-embed {
+    height: 300px;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand-text {
+    font-size: 0.96rem;
+  }
+
+  .site-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy,
+  .home-panel,
+  .booking-panel,
+  .detail-summary,
+  .detail-missing,
+  .contact-card,
+  .map-card,
+  .about-card {
+    border-radius: 22px;
+  }
+
+  .hero-title-compact {
+    font-size: 1.24rem !important;
+    line-height: 1.34 !important;
+  }
+
+  .page-title-exact {
+    font-size: 1.35rem !important;
+    line-height: 1.24 !important;
+  }
+
+  .home-panel-title-exact {
+    font-size: 1.32rem !important;
+  }
+
+  .hero-text,
+  .places-lead,
+  .about-lead,
+  .contact-lead,
+  .cart-page-text,
+  .detail-location,
+  .detail-description,
+  .detail-note {
+    font-size: 0.97rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stay-visual,
+  .stay-image {
+    height: 200px;
+    min-height: 200px;
+  }
+
+  .cart-item-main {
+    flex-direction: column;
+  }
+
+  .cart-item-image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .map-embed {
+    height: 260px;
   }
 }
