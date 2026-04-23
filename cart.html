@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cherry | Savat</title>
+  <meta name="description"
+    content="Cherry savat sahifasida tanlangan turar joylarni ko'ring, olib tashlang va mahalliy bronni tasdiqlang.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Cherry bosh sahifa">
+        <span class="brand-mark">N</span>
+        <span class="brand-text">Nilufar Botirova</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Asosiy navigatsiya">
+        <a href="index.html">Bosh sahifa</a>
+        <a href="places.html">Turar joylar</a>
+        <a href="about.html">Biz haqimizda</a>
+        <a href="contact.html">Bog'lanish</a>
+        <a href="cart.html" aria-current="page">Savat <span id="nav-cart-count" class="nav-count">0</span></a>
+      </nav>
+    </header>
+
+    <main class="cart-page-main">
+      <section class="cart-page-intro">
+        <p class="eyebrow">Savat Sahifasi</p>
+        <h1 class="page-title-exact">Bron qilgan joylaringiz shu yerda.</h1>
+        <p class="cart-page-text">
+          Savatdagi variantlarni ko'ring, kerak bo'lsa olib tashlang va mahalliy bronni alohida sahifada tasdiqlang.
+        </p>
+      </section>
+
+      <section class="cart-page-section">
+        <div class="booking-panel booking-panel-page" aria-labelledby="booking-title">
+          <div class="booking-header">
+            <div>
+              <p class="eyebrow">Sayohat Savati</p>
+              <h2 id="booking-title">Tanlangan turar joylaringiz</h2>
+            </div>
+            <span id="cart-count-pill" class="cart-count-pill">0 turar joy</span>
+          </div>
+
+          <div id="booking-empty" class="booking-empty">
+            <p>Savatingiz hozircha bo'sh. Turar joylar sahifasidan variant qo'shing.</p>
+          </div>
+
+          <div id="booking-content" class="booking-content hidden">
+            <div id="cart-items" class="cart-items"></div>
+
+            <div class="booking-details">
+              <div>
+                <span>Tanlanganlar</span>
+                <strong id="booking-count">0 turar joy</strong>
+              </div>
+              <div>
+                <span>Boshlang'ich jami</span>
+                <strong id="booking-total">$0 / tuniga</strong>
+              </div>
+            </div>
+
+            <div class="cart-actions">
+              <button id="clear-booking" class="ghost-button" type="button">Savatni tozalash</button>
+              <button id="confirm-booking" class="primary-button" type="button">Administrator orqali tasdiqlash</button>
+            </div>
+            <p id="booking-message" class="booking-message" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="stays-data.js"></script>
+  <script src="cart.js"></script>
+</body>
+
+</html>

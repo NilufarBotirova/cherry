@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cherry | Turar joy tafsilotlari</title>
+  <meta
+    name="description"
+    content="Cherry turar joy tafsilotlari sahifasida joy rasmi, narx, qulayliklar va bron tugmasini ko'ring."
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Cherry bosh sahifa">
+        <span class="brand-mark">N</span>
+        <span class="brand-text">Nilufar Botirova</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Asosiy navigatsiya">
+        <a href="index.html">Bosh sahifa</a>
+        <a href="places.html">Turar joylar</a>
+        <a href="about.html">Biz haqimizda</a>
+        <a href="contact.html">Bog'lanish</a>
+        <a href="cart.html">Savat <span id="nav-cart-count" class="nav-count">0</span></a>
+      </nav>
+    </header>
+
+    <main class="detail-page-main">
+      <a class="ghost-button back-link" href="places.html">Turar joylarga qaytish</a>
+
+      <section id="detail-missing" class="detail-missing hidden">
+        <p class="eyebrow">Topilmadi</p>
+        <h1>Bu turar joy topilmadi.</h1>
+        <p class="cart-page-text">Iltimos, turar joylar sahifasiga qaytib boshqa variantni tanlang.</p>
+      </section>
+
+      <section id="detail-content" class="detail-layout hidden">
+        <div class="detail-media">
+          <img id="detail-image" class="detail-image" src="" alt="">
+        </div>
+
+        <div class="detail-summary">
+          <p id="detail-type" class="eyebrow"></p>
+          <h1 id="detail-name" class="detail-title"></h1>
+          <p id="detail-location" class="detail-location"></p>
+
+          <div class="detail-pills">
+            <span id="detail-rating" class="detail-pill"></span>
+            <span id="detail-guests" class="detail-pill"></span>
+            <span id="detail-price" class="detail-pill detail-pill-strong"></span>
+          </div>
+
+          <p id="detail-description" class="detail-description"></p>
+
+          <section class="detail-block">
+            <h2>Qulayliklar</h2>
+            <ul id="detail-amenities" class="detail-amenities"></ul>
+          </section>
+
+          <section class="detail-block">
+            <h2>Nega bu joy yoqadi</h2>
+            <p class="detail-note">
+              Bu sahifa orqali turar joy haqida batafsil ma'lumotni ko'rishingiz va uni to'g'ridan-to'g'ri savatga qo'shishingiz mumkin.
+            </p>
+          </section>
+
+          <div class="detail-actions">
+            <button id="detail-add-button" class="primary-button" type="button">Savatga qo'shish</button>
+            <a class="ghost-button" href="cart.html">Savatni ochish</a>
+          </div>
+          <p id="detail-message" class="booking-message" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="stays-data.js"></script>
+  <script src="detail.js"></script>
+</body>
+</html>

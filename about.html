@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cherry | Biz Haqimizda</title>
+  <meta
+    name="description"
+    content="Cherry haqida ma'lumot, loyiha maqsadi va ushbu mahalliy sayohat demo saytining vazifalari."
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Cherry bosh sahifa">
+        <span class="brand-mark">N</span>
+        <span class="brand-text">Nilufar Botirova</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Asosiy navigatsiya">
+        <a href="index.html">Bosh sahifa</a>
+        <a href="places.html">Turar joylar</a>
+        <a href="about.html" aria-current="page">Biz haqimizda</a>
+        <a href="contact.html">Bog'lanish</a>
+        <a href="cart.html">Savat <span id="nav-cart-count" class="nav-count">0</span></a>
+      </nav>
+    </header>
+
+    <main class="about-page-main">
+      <section class="about-hero">
+        <p class="eyebrow">Biz Haqimizda</p>
+        <h1 class="page-title-exact">Cherry oddiy va chiroyli sayohat tajribasi uchun yaratilgan demo loyiha.</h1>
+        <p class="about-lead">
+          Bu loyiha foydalanuvchiga haqiqiy joy rasmlarini ko'rish, turar joylarni tanlash,
+          tafsilotlarini ochish va savatga qo'shish jarayonini sodda ko'rinishda namoyish etadi.
+        </p>
+      </section>
+
+      <section class="about-grid">
+        <article class="about-card">
+          <p class="eyebrow">Maqsad</p>
+          <h2>Nega bu sayt yaratildi?</h2>
+          <p>
+            Cherry mehmonxona yoki bron platformasining juda yengil, tushunarli va mahalliy ishlaydigan
+            prototipini ko'rsatish uchun tayyorlangan. Bu yerda backend yoki hostingga bog'lanmasdan
+            foydalanuvchi oqimini ko'rish mumkin.
+          </p>
+        </article>
+
+        <article class="about-card">
+          <p class="eyebrow">Imkoniyatlar</p>
+          <h2>Hozir nimalar bor?</h2>
+          <ul class="about-list">
+            <li>Turar joylar uchun alohida sahifa</li>
+            <li>Har bir turar joy uchun alohida tafsilot sahifasi</li>
+            <li>Alohida savat sahifasi</li>
+            <li>Mahalliy saqlash orqali savatni eslab qolish</li>
+            <li>Haqiqiy joylarga oid suratlar</li>
+          </ul>
+        </article>
+
+        <article class="about-card">
+          <p class="eyebrow">Keyingi Qadam</p>
+          <h2>Keyin nima qo'shilishi mumkin?</h2>
+          <p>
+            Keyingi bosqichda foydalanuvchi tizimi, to'lov, haqiqiy bron ma'lumotlari, xarita,
+            qidiruv, filtr va admin boshqaruvi kabi qismlarni qo'shish mumkin.
+          </p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const cartIds = JSON.parse(localStorage.getItem("cherry-cart-ids") || "[]");
+    const navCartCount = document.getElementById("nav-cart-count");
+    if (navCartCount) {
+      navCartCount.textContent = String(cartIds.length);
+    }
+  </script>
+</body>
+</html>

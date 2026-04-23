@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cherry | Mahalliy Sayohat Bron Demo</title>
+  <meta
+    name="description"
+    content="Cherry tanlangan yo'nalishlar, haqiqiy joy suratlari va oddiy savat bilan ishlaydigan mahalliy sayohat va bron demo saytidir."
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Cherry bosh sahifa">
+        <span class="brand-mark">N</span>
+        <span class="brand-text">Nilufar Botirova</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Asosiy navigatsiya">
+        <a href="index.html" aria-current="page">Bosh sahifa</a>
+        <a href="places.html">Turar joylar</a>
+        <a href="about.html">Biz haqimizda</a>
+        <a href="contact.html">Bog'lanish</a>
+        <a href="cart.html">Savat <span id="nav-cart-count" class="nav-count">0</span></a>
+      </nav>
+    </header>
+
+    <main id="top" class="home-main">
+      <section class="hero home-hero">
+        <div class="hero-copy home-hero-copy">
+          <p class="eyebrow">Cherry Travel Demo</p>
+          <h1 class="hero-title-compact">Xush kelibsiz.<br>“Cherry” sayyohlik agentligiga! Eng zoʻr transport va xizmat koʻrsatish — faqat bizda.</h1>
+          <p class="hero-text">
+            Cherry orqali tanlangan turar joylarni alohida sahifada ko'rishingiz, har bir joyning
+            tafsilotini ochishingiz va yoqqan variantlarni savatga yig'ib, keyin xotirjam
+            taqqoslashingiz mumkin.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="places.html">Turar joylarni ko'rish</a>
+            <a class="ghost-button" href="contact.html">Bog'lanish</a>
+          </div>
+
+          <div class="hero-stats" aria-label="Asosiy ko'rsatkichlar">
+            <article>
+              <strong>8</strong>
+              <span>Haqiqiy joy suratlari</span>
+            </article>
+            <article>
+              <strong>8</strong>
+              <span>Tanlangan demo turar joylar</span>
+            </article>
+            <article>
+              <strong>1 savat</strong>
+              <span>Bir nechta turar joy bilan rejalash</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-panels" aria-label="Cherry imkoniyatlari">
+        <article class="home-panel home-panel-wide">
+          <p class="eyebrow">Qanday Ishlaydi</p>
+          <h2 class="home-panel-title-exact">Bir nechta sahifa, bitta tushunarli oqim.</h2>
+          <p>
+            Bosh sahifa umumiy yo'nalishni beradi, turar joylar alohida sahifada ko'rsatiladi,
+            har bir variant detail sahifasida ochiladi, savat esa mustaqil sahifa sifatida ishlaydi.
+          </p>
+          <ul class="home-panel-list">
+            <li>Turar joylarni alohida sahifada ko'rish</li>
+            <li>Har bir joyni batafsil sahifada ochish</li>
+            <li>Savatda bir nechta variantni saqlash</li>
+          </ul>
+        </article>
+
+        <article class="home-panel">
+          <p class="eyebrow">Tajriba</p>
+          <h2 class="home-panel-title-exact">Faqat local ishlash uchun qulay.</h2>
+          <p>
+            Hosting va backend bo'lmasa ham, demo oqimini bemalol ko'rish mumkin.
+            Hozircha asosiy urg'u dizayn, navigatsiya va foydalanuvchi tajribasida.
+          </p>
+        </article>
+
+        <article class="home-panel">
+          <p class="eyebrow">Keyingi Qadam</p>
+          <h2 class="home-panel-title-exact">Keyin real platformaga aylantirish mumkin.</h2>
+          <p>
+            Keyingi bosqichda qidiruv, band sanalari, foydalanuvchi akkaunti, to'lov va admin
+            boshqaruvi kabi qismlarni bosqichma-bosqich qo'shish mumkin.
+          </p>
+          <a class="text-link" href="about.html">Loyiha haqida ko'proq</a>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script>
+    const cartIds = JSON.parse(localStorage.getItem("cherry-cart-ids") || "[]");
+    const navCartCount = document.getElementById("nav-cart-count");
+    if (navCartCount) {
+      navCartCount.textContent = String(cartIds.length);
+    }
+  </script>
+</body>
+</html>
