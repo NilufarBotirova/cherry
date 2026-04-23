@@ -24,7 +24,7 @@ window.NILUWA_STAYS = [
     guests: 3,
     image: "images/tashkent.jpg",
     imageAlt: "Toshkentdagi zamonaviy shahar manzarasi",
-    description: "Keng xonalar, yaqin atrofdagi oshxonalar va kech chiqish imkoniga ega sokin hovlili turar joy.",
+    description: "Keng xonalar, yaqin atrofdagi oshxonalar va kech chiqish imkoniga ega sokin hovlili manzil.",
     amenities: ["Aeroportdan kutib olish", "Wi-Fi", "Nonushta"]
   },
   {
@@ -88,7 +88,7 @@ window.NILUWA_STAYS = [
     name: "Parij Left Bank Hideaway",
     city: "Parij",
     country: "Fransiya",
-    type: "Studio turar joy",
+    type: "Studio manzil",
     price: 194,
     rating: 4.7,
     guests: 2,

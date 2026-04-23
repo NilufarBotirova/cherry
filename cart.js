@@ -45,7 +45,7 @@ function restoreState() {
 
 function updateCartCount() {
   const count = state.cart.length;
-  const label = `${count} turar joy`;
+  const label = `${count} manzil`;
 
   navCartCount.textContent = String(count);
   cartCountPill.textContent = label;
@@ -108,7 +108,7 @@ function renderCart() {
     cartItems.appendChild(item);
   });
 
-  bookingCount.textContent = `${state.cart.length} turar joy`;
+  bookingCount.textContent = `${state.cart.length} manzil`;
   bookingTotal.textContent = `${formatMoney(total)} / tuniga`;
 }
 

@@ -87,7 +87,7 @@ function renderDetail(stay) {
 
   detailAddButton.addEventListener("click", () => {
     if (isInCart(stay.id)) {
-      detailMessage.textContent = "Bu turar joy allaqachon savatda mavjud.";
+      detailMessage.textContent = "Bu manzil allaqachon savatda mavjud.";
       return;
     }
 

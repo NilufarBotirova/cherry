@@ -43,7 +43,7 @@ function updateCartCount() {
 
 function renderStays(items) {
   resultsGrid.innerHTML = "";
-  resultsCount.textContent = `${items.length} ta turar joy`;
+  resultsCount.textContent = `${items.length} ta manzil`;
 
   items.forEach((stay) => {
     const fragment = template.content.cloneNode(true);
