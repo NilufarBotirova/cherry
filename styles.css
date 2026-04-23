@@ -1089,6 +1089,11 @@ button:focus {
     width: min(100% - 20px, 100%);
   }
 
+  .home-hero-copy {
+    max-width: none;
+    margin: 0;
+  }
+
   .site-header,
   .section-heading,
   .stay-meta,
