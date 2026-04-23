@@ -139,6 +139,7 @@ select {
 .home-hero {
   grid-template-columns: 1fr;
   align-items: stretch;
+  width: 100%;
 }
 
 .hero-copy,
@@ -165,8 +166,8 @@ select {
 
 .home-hero-copy {
   width: 100%;
-  max-width: 940px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(244, 248, 254, 0.96));
   color: var(--text);
 }
@@ -1087,11 +1088,6 @@ button:focus {
 @media (max-width: 700px) {
   .page-shell {
     width: min(100% - 20px, 100%);
-  }
-
-  .home-hero-copy {
-    max-width: none;
-    margin: 0;
   }
 
   .site-header,
